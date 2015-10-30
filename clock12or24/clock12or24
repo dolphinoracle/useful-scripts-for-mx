@@ -1,0 +1,34 @@
+#!/bin/bash
+
+#change orage clock preference to 12 hour in case of USA or Great Britain
+
+
+#this function changes the two xfce4-orageclock-plugin-1.rc files (in /home/demo/.config/xfce4/panel/ and /etc/skel/.config/xfce4/panel/
+#from what should be a default %H:%M international 24 hour standard
+
+changeto12hour()
+{
+#sed -i -r s/data0=%H/data0=%I/ /home/demo/.config/xfce4/panel/xfce4-orageclock-plugin-1.rc
+sed -i -r s/data0=%H/data0=%I/ /etc/skel/.config/xfce4/panel/xfce4-orageclock-plugin-1.rc
+
+}
+
+#look for a check file and if present exit, otherwise create check file and then parse language
+
+if [ -e /etc/clock-ckd ]; then
+  :
+
+else
+
+  touch /etc/clock-ckd
+
+#the case statement parses the default USA and Great Britain locales.  Others can be added
+
+case $LANG in
+
+	en_US.UTF-8|en_GB.UTF-8) changeto12hour
+	;;
+
+esac
+fi
+
