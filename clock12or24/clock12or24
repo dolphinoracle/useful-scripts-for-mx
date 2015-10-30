@@ -9,8 +9,10 @@ LNG=$(cat /etc/default/locale|grep LANG)
 
 changeto12hour()
 {
-#sed -i -r s/data0=%H/data0=%I/ /home/demo/.config/xfce4/panel/xfce4-orageclock-plugin-1.rc
-#sed -i -r s/data0=%H/data0=%I/ /etc/skel/.config/xfce4/panel/xfce4-orageclock-plugin-1.rc
+sed -i -r s/data0=%H/data0=%I/ /home/demo/.config/xfce4/panel/xfce4-orageclock-plugin-1.rc
+sed -i -r s/data0=%H/data0=%I/ /etc/skel/.config/xfce4/panel/xfce4-orageclock-plugin-1.rc
+sed -i -r s/data0=%H/data0=%I/ /usr/local/share/appdata/panels/vertical/panel/xfce4-orageclock-plugin-1.rc
+sed -i -r s/data0=%H/data0=%I/ /usr/local/share/appdata/panels/horizontal/panel/xfce4-orageclock-plugin-1.rc
 sed -i -r s/%H/%I/ /home/demo/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
 sed -i -r s/%H/%I/ /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
 sed -i -r s/%H/%I/ /usr/local/share/appdata/panels/horizontal/xfce4-panel.xml
