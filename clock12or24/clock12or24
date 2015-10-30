@@ -40,7 +40,7 @@ else
 
 case $LNG in
 
-	LANG=en_US.UTF-8|LANG=en_GB.UTF-8) changeto12hour
+	LANG=en_US.UTF-8|LANG=ar_EG.UTF-8|LANG=el_GR.UTF-8|LANG=sq_AL.UTF-8) changeto12hour
 	;;
 
 esac
