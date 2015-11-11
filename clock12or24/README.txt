@@ -9,3 +9,5 @@ README
 comment:  this script will do nothng on a default a4 live system as the clocks are not defined the way the script assumes.
 
 rev 2 - added additional locale info.
+
+rev 9 - update comments
