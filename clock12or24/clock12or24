@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#change orage clock preference to 12 hour in case of USA or Great Britain
+#change orage clock preference to 12 hour in case of USA, Albania, Eygpt, Greece
 
 #this function changes the two xfce4-orageclock-plugin-1.rc files (in /home/demo/.config/xfce4/panel/ and /etc/skel/.config/xfce4/panel/
 #from what should be a default %H:%M international 24 hour standard
@@ -36,7 +36,7 @@ else
 
   touch /etc/clock-ckd
 
-#the case statement parses the default locale file in /etc/default/locale for USA and Great Britain codes.  Others can be added
+#the case statement parses the default locale file in /etc/default/locale for USA, Albania, Eygpt, Greece.  Others can be added
 
 case $LNG in
 
