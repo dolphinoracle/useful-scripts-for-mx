@@ -7,4 +7,4 @@
 /usr/bin/xfce4-session
 
 #logout sound
-/usr/local/bin/logoutsound &
+/usr/local/bin/logoutsound
