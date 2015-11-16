@@ -1,0 +1,15 @@
+The files here will create system sounds at login and logout.
+
+put 
+
+startupsound
+logoutsound
+xfce4-session
+
+in /usr/local/bin.  All must be set executable.
+
+makecustomstartupsound-customthunaraction contains custom Thunar actions for setting custom login and logout.
+
+The script assumes that a sound theme is installed in /usr/share/sounds and is defined in xfconf.  
+
+If no sound theme is installed, user can still select customs login and logout sounds.
