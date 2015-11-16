@@ -1,0 +1,9 @@
+<action>
+	<icon></icon>
+	<name>Make Startup Sound</name>
+	<unique-id>1447629663342880-3</unique-id>
+	<command>echo %f &gt;~/.config/startupsound.conf</command>
+	<description>Make selected Startup Sound</description>
+	<patterns>*</patterns>
+	<audio-files/>
+</action>
