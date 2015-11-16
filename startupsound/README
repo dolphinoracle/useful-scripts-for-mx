@@ -15,6 +15,9 @@ and put
 52canberra-gtk-module 
 in /etc/X11/Xsession.d/
 
+reboot for these changes to go into effect.
+on first login, you may need to set pavucontrol systemsounds to 100% (might be 0 by default)
+
 custom thunar action:
 makecustomstartupsound-customthunaraction contains 
 custom Thunar actions for setting custom login and logout sounds.
@@ -22,7 +25,6 @@ copy and paste contens of this file into
 ~/.config/Thunar/uca.xml
 just before the last </action>
 
-assumptions:
 The script assumes that a sound theme is installed in 
 /usr/share/sounds 
 and is defined in xfconf.  
@@ -39,3 +41,5 @@ make sure to save the change.
 
 In Appearance, enable Event Sounds on Settings Tab.  You can enable both 
 checkboxes for even more sounds.
+
+logout and login to ensure changes to go into effect.
