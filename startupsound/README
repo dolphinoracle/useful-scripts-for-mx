@@ -5,6 +5,7 @@ put
 startupsound
 logoutsound
 xfce4-session
+pulse-start
 
 in /usr/local/bin.  All must be set executable.
 
