@@ -9,8 +9,13 @@ pulse-start
 
 in /usr/local/bin.  All must be set executable.
 
+for event sounds other than login:
+install:  libcanberra-gstreamer, libcanberra-pulse, and libcanberra-gtk-module.
+put 52canberra-gtk-module in /etc/X11/Xsession.d/
+
+custom thunar action:
 makecustomstartupsound-customthunaraction contains custom Thunar actions for setting custom login and logout.
 
+assumptions:
 The script assumes that a sound theme is installed in /usr/share/sounds and is defined in xfconf.  
-
 If no sound theme is installed, user can still select customs login and logout sounds.
