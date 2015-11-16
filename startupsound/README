@@ -5,17 +5,37 @@ put
 startupsound
 logoutsound
 xfce4-session
-pulse-start
 
 in /usr/local/bin.  All must be set executable.
 
-for event sounds other than login:
-install:  libcanberra-gstreamer, libcanberra-pulse, and libcanberra-gtk-module.
-put 52canberra-gtk-module in /etc/X11/Xsession.d/
+for event sounds other than login/logout:
+run the following as root to install canberra for system event sounds
+apt-get install libcanberra-gstreamer libcanberra-pulse libcanberra-gtk-module.
+and put 
+52canberra-gtk-module 
+in /etc/X11/Xsession.d/
 
 custom thunar action:
-makecustomstartupsound-customthunaraction contains custom Thunar actions for setting custom login and logout.
+makecustomstartupsound-customthunaraction contains 
+custom Thunar actions for setting custom login and logout sounds.
+copy and paste contens of this file into
+~/.config/Thunar/uca.xml
+just before the last </action>
 
 assumptions:
-The script assumes that a sound theme is installed in /usr/share/sounds and is defined in xfconf.  
-If no sound theme is installed, user can still select customs login and logout sounds.
+The script assumes that a sound theme is installed in 
+/usr/share/sounds 
+and is defined in xfconf.  
+If no sound theme is installed, user can still select 
+custom login and logout sounds through thunar custom action.
+
+Borealis sound theme is provide for your convienence.
+usr_share_sounds_borealis.tar.gz
+extract this file into /usr/share/themes/
+
+In Xfconf (Xfce Settings Editor) find this value:
+xsettings>SoundThemeName  and set to chosen theme (ie: Borealis)
+make sure to save the change.
+
+In Appearance, enable Event Sounds on Settings Tab.  You can enable both 
+checkboxes for even more sounds.
