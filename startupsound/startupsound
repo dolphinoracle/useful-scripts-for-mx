@@ -19,6 +19,16 @@ echo sound theme is $soundthemename
 defaultsound=$(find  /usr/share/sounds/$soundthemename/ |grep desktop-login)
 echo default sound is $defaultsound
 
+vboxtest=$(cat /proc/modules |grep vboxguest)
+echo vboxtest is $vboxtest
+
+#set Master Surround Channel volume to 70% only in VirtualBox
+
+#for VirtualBox VMs that use Master Surround
+if [ "$vboxtest" != "" ]; then
+	amixer -c 0 sset "Master Surround" 21
+fi
+
 if [ "$customsound" = "" ]; then
 	if [ "$soundstatus" = "true" ]; then
 		cvlc --play-and-exit file://$defaultsound 
