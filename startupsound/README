@@ -7,6 +7,7 @@ logoutsound
 xfce4-session
 
 in /usr/local/bin.  All must be set executable.
+chmod a+x /usr/local/bin/*sound && chmod a+x /usr/local/bin/xfce4-session
 
 for event sounds other than login/logout:
 run the following as root to install canberra for system event sounds
