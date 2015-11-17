@@ -33,7 +33,7 @@ custom login and logout sounds through thunar custom action.
 
 Borealis sound theme is provide for your convienence.
 usr_share_sounds_borealis.tar.gz
-extract this file into /usr/share/themes/
+extract this file into /usr/share/sounds/
 
 In Xfconf (Xfce Settings Editor) find this value:
 xsettings>SoundThemeName  and set to chosen theme (ie: Borealis)
